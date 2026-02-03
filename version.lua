@@ -1,4 +1,4 @@
-local version = 1.0.0
+local version = "1.0.0"
 local CheckV = game.Players.LocalPlayer.PlayerGui:FindFirstChild("SoundForChat5")
  if  CheckV   then
 		

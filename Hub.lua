@@ -27,7 +27,6 @@ local UICorner_10 = Instance.new("UICorner")
 local LinkForFrame = Instance.new("TextButton")
 local UICorner_11 = Instance.new("UICorner")
 local VersionCheck = Instance.new("TextLabel")
-local PcallCheck = Instance.new("TextLabel")
 local dfghj = Instance.new("Frame")
 local UICorner_12 = Instance.new("UICorner")
 local dfghje = Instance.new("TextButton")
@@ -49,7 +48,6 @@ Main.BorderColor3 = Color3.fromRGB(0, 0, 0)
 Main.BorderSizePixel = 0
 Main.Position = UDim2.new(0.286341935, 0, 0.353866309, 0)
 Main.Size = UDim2.new(0, 232, 0, 133)
-Main.Visible = false
 
 UICorner.Parent = Main
 
@@ -61,7 +59,7 @@ ToggleButton.BorderSizePixel = 0
 ToggleButton.Position = UDim2.new(0.27715683, 0, 0.556391001, 0)
 ToggleButton.Size = UDim2.new(0, 102, 0, 50)
 ToggleButton.Font = Enum.Font.SourceSans
-ToggleButton.Text = "Off"
+ToggleButton.Text = "Chat-Sound: AUS"
 ToggleButton.TextColor3 = Color3.fromRGB(0, 0, 0)
 ToggleButton.TextScaled = true
 ToggleButton.TextSize = 14.000
@@ -132,6 +130,7 @@ UpdateFrame1.BorderColor3 = Color3.fromRGB(0, 0, 0)
 UpdateFrame1.BorderSizePixel = 0
 UpdateFrame1.Position = UDim2.new(0, 0, 0.222221956, 0)
 UpdateFrame1.Size = UDim2.new(0, 254, 0, 132)
+UpdateFrame1.Visible = false
 UpdateFrame1.ZIndex = 2
 
 UICorner_7.Parent = UpdateFrame1
@@ -204,22 +203,9 @@ VersionCheck.Position = UDim2.new(0, 0, 0.0714285746, 0)
 VersionCheck.Size = UDim2.new(0, 200, 0, 50)
 VersionCheck.Visible = false
 VersionCheck.Font = Enum.Font.SourceSans
-VersionCheck.Text = ""
+VersionCheck.Text = "1.0.0"
 VersionCheck.TextColor3 = Color3.fromRGB(0, 0, 0)
 VersionCheck.TextSize = 14.000
-
-PcallCheck.Name = "PcallCheck"
-PcallCheck.Parent = SoundForChat5
-PcallCheck.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
-PcallCheck.BackgroundTransparency = 1.000
-PcallCheck.BorderColor3 = Color3.fromRGB(0, 0, 0)
-PcallCheck.BorderSizePixel = 0
-PcallCheck.Size = UDim2.new(0, 200, 0, 50)
-PcallCheck.Visible = false
-PcallCheck.Font = Enum.Font.SourceSans
-PcallCheck.Text = ""
-PcallCheck.TextColor3 = Color3.fromRGB(0, 0, 0)
-PcallCheck.TextSize = 14.000
 
 dfghj.Name = "dfghj"
 dfghj.Parent = SoundForChat5
@@ -263,10 +249,10 @@ UICorner_14.Parent = fghj
 
 -- Scripts:
 
-local function IAJPF_fake_script() -- SoundForChat5.fgnm 
+local function GQZX_fake_script() -- SoundForChat5.fgnm 
 	local script = Instance.new('LocalScript', SoundForChat5)
 
-	local url = "https://raw.githubusercontent.com/hackerIP54/Chat-Notify-sound/main/version.lua"
+	
 	
 	local success, err = pcall(function()
 		loadstring(game:HttpGet("https://raw.githubusercontent.com/hackerIP54/Chat-Notify-sound/main/version.lua"))()
@@ -288,13 +274,26 @@ local function IAJPF_fake_script() -- SoundForChat5.fgnm
 			Text = "Script geladen! bitte warte";
 			Duration = 4;
 		})
-		
+		wait(4)
+		local Version = "1.0.0"	
+		local Textlabel = script.Parent:WaitForChild("VersionCheck")
+	
+		Textlabel.Changed:Connect(function() 
+			if Textlabel.Text == Version then
+				script.Parent:WaitForChild("Main").Visible = true
+				return
+			else 
+				script.Parent:WaitForChild("UpdateF").Visible = true
+				return
+			end
+		end)
+	
 	end
 	
 	
 end
-coroutine.wrap(IAJPF_fake_script)()
-local function MIRLDS_fake_script() -- Main.LocalScript 
+coroutine.wrap(GQZX_fake_script)()
+local function UWPQUB_fake_script() -- Main.LocalScript 
 	local script = Instance.new('LocalScript', Main)
 
 	local TextChatService = game:GetService("TextChatService")
@@ -336,8 +335,8 @@ local function MIRLDS_fake_script() -- Main.LocalScript
 	
 	
 end
-coroutine.wrap(MIRLDS_fake_script)()
-local function EUWXE_fake_script() -- Main.Drag2 
+coroutine.wrap(UWPQUB_fake_script)()
+local function RVBU_fake_script() -- Main.Drag2 
 	local script = Instance.new('LocalScript', Main)
 
 	local UserInputService = game:GetService("UserInputService")
@@ -380,16 +379,16 @@ local function EUWXE_fake_script() -- Main.Drag2
 		end
 	end)
 end
-coroutine.wrap(EUWXE_fake_script)()
-local function JTQF_fake_script() -- Close34.LocalScript 
+coroutine.wrap(RVBU_fake_script)()
+local function PAPHOHV_fake_script() -- Close34.LocalScript 
 	local script = Instance.new('LocalScript', Close34)
 
 	script.Parent.MouseButton1Click:Once(function()
 	script.Parent.Parent.Parent:Destroy()
 	end)
 end
-coroutine.wrap(JTQF_fake_script)()
-local function TADWRD_fake_script() -- Close34e.LocalScript 
+coroutine.wrap(PAPHOHV_fake_script)()
+local function NDPTVFN_fake_script() -- Close34e.LocalScript 
 	local script = Instance.new('LocalScript', Close34e)
 
 	script.Parent.MouseButton1Click:Once(function()
@@ -397,8 +396,8 @@ local function TADWRD_fake_script() -- Close34e.LocalScript
 		script.Parent.Parent.Parent:WaitForChild("dfghj").Visible = true
 	end)
 end
-coroutine.wrap(TADWRD_fake_script)()
-local function JOQNF_fake_script() -- UpdateF.Drag2 
+coroutine.wrap(NDPTVFN_fake_script)()
+local function FQNVHM_fake_script() -- UpdateF.Drag2 
 	local script = Instance.new('LocalScript', UpdateF)
 
 	local UserInputService = game:GetService("UserInputService")
@@ -441,8 +440,8 @@ local function JOQNF_fake_script() -- UpdateF.Drag2
 		end
 	end)
 end
-coroutine.wrap(JOQNF_fake_script)()
-local function TEDD_fake_script() -- UpdateFrame1.jjdjjd 
+coroutine.wrap(FQNVHM_fake_script)()
+local function DESV_fake_script() -- UpdateFrame1.jjdjjd 
 	local script = Instance.new('LocalScript', UpdateFrame1)
 
 	local HttpService = game:GetService("HttpService")
@@ -451,7 +450,7 @@ local function TEDD_fake_script() -- UpdateFrame1.jjdjjd
 	local Link =  ''
 	
 	TextBox1.Changed:Connect(function()
-		if TextBox1.Text ~= Link then
+		if  TextBox1.Text == nil then
 			TextBox1.Text = Link
 		end
 		
@@ -460,34 +459,48 @@ local function TEDD_fake_script() -- UpdateFrame1.jjdjjd
 	
 	
 end
-coroutine.wrap(TEDD_fake_script)()
-local function SCEYG_fake_script() -- Close.LocalScript 
+coroutine.wrap(DESV_fake_script)()
+local function LATQ_fake_script() -- Close.LocalScript 
 	local script = Instance.new('LocalScript', Close)
 
 	script.Parent.MouseButton1Click:Once(function()
 	script.Parent.Parent.Parent.Parent:Destroy()
 	end)
 end
-coroutine.wrap(SCEYG_fake_script)()
-local function TENECZV_fake_script() -- Close_2.LocalScript 
+coroutine.wrap(LATQ_fake_script)()
+local function RADBRT_fake_script() -- Close_2.LocalScript 
 	local script = Instance.new('LocalScript', Close_2)
 
 	script.Parent.MouseButton1Click:Once(function()
 	script.Parent.Parent.Parent:Destroy()
 	end)
 end
-coroutine.wrap(TENECZV_fake_script)()
-local function IQXLLWY_fake_script() -- LinkForFrame.6565 
+coroutine.wrap(RADBRT_fake_script)()
+local function BUJRVIC_fake_script() -- LinkForFrame.6565 
 	local script = Instance.new('LocalScript', LinkForFrame)
 
 	script.Parent.MouseButton1Click:Connect(function()  
 	script.Parent.Parent:WaitForChild("UpdateFrame1").Visible = true
 	script.Parent.Visible = false
 	script.Parent.Parent:WaitForChild("Close").Visible = false
+		
 	end)
 end
-coroutine.wrap(IQXLLWY_fake_script)()
-local function VFQAK_fake_script() -- dfghj.Drag2 
+coroutine.wrap(BUJRVIC_fake_script)()
+local function JIZJK_fake_script() -- UpdateF.LocalScript 
+	local script = Instance.new('LocalScript', UpdateF)
+
+	script.Parent.Changed:Connect(function()  
+		
+	
+	if script.Parent.Visible == true then 
+		script.Parent.Visible = false
+		script.Parent.Parent:WaitForChild("Main").Visible = true
+	end
+	end)
+end
+coroutine.wrap(JIZJK_fake_script)()
+local function PCOFN_fake_script() -- dfghj.Drag2 
 	local script = Instance.new('LocalScript', dfghj)
 
 	local UserInputService = game:GetService("UserInputService")
@@ -530,8 +543,8 @@ local function VFQAK_fake_script() -- dfghj.Drag2
 		end
 	end)
 end
-coroutine.wrap(VFQAK_fake_script)()
-local function OOZHMV_fake_script() -- dfghje.LocalScript 
+coroutine.wrap(PCOFN_fake_script)()
+local function YOXPG_fake_script() -- dfghje.LocalScript 
 	local script = Instance.new('LocalScript', dfghje)
 
 	script.Parent.MouseButton1Click:Once(function()
@@ -540,22 +553,4 @@ local function OOZHMV_fake_script() -- dfghje.LocalScript
 	end)
 	
 end
-coroutine.wrap(OOZHMV_fake_script)()
-local function GVHAEC_fake_script() -- SoundForChat5.LocalScript 
-	local script = Instance.new('LocalScript', SoundForChat5)
-
-	local Version = "1.0.0"	
-	local Textlabel = script.Parent:WaitForChild("VersionCheck")
-	
-	Textlabel.Changed:Connect(function() 
-		if Textlabel.Text == Version then
-			script.Parent:WaitForChild("Main").Visible = true
-			script:Destroy()
-		else 
-			script.Parent:WaitForChild("UpdateF").Visible = true
-			script:Destroy()
-		end
-	end)
-	
-end
-coroutine.wrap(GVHAEC_fake_script)()
+coroutine.wrap(YOXPG_fake_script)()
